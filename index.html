@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EOHM - Electronic Organization for Humanitarian Media. Building a culture of peace through media content and digital projects promoting diversity and peace.">
+    <meta name="keywords" content="humanitarian, media, peace, diversity, Yemen, non-profit, NGO">
+    <title>EOHM - Building a Culture of Peace</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Leaflet CSS for maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <a href="index.html" class="nav__logo">
+                    <img src="images/eohm-logo.webp" alt="EOHM Logo" class="nav__logo-img">
+                    <span class="nav__logo-text">EOHM</span>
+                </a>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link nav__link--active">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">About Us</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="projects.html" class="nav__link">Projects</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="nav__actions">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                        <span class="theme-toggle__icon">🌙</span>
+                    </button>
+                    <button class="nav__search-btn" id="search-btn" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        
+        <!-- Search Modal -->
+        <div class="search-modal" id="search-modal">
+            <div class="search-modal__content">
+                <input type="text" class="search-modal__input" placeholder="Search articles, projects..." id="search-input">
+                <button class="search-modal__close" id="search-close">&times;</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero__background">
+                <div class="hero__overlay"></div>
+            </div>
+            <div class="hero__content container">
+                <h1 class="hero__title">Building a Culture of Peace</h1>
+                <p class="hero__description">
+                    EOHM is an independent non-profit organization dedicated to combating violence, discrimination, and hate speech through innovative media content and digital projects that promote diversity and peace.
+                </p>
+                <div class="hero__actions">
+                    <a href="about.html" class="btn btn--primary">Learn More</a>
+                    <a href="contact.html" class="btn btn--secondary">Get Involved</a>
+                </div>
+            </div>
+            <div class="hero__scroll">
+                <span class="hero__scroll-text">Scroll Down</span>
+                <div class="hero__scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="featured-projects section" id="featured-projects">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Our Current Projects</h2>
+                    <p class="section__description">
+                        Discover our ongoing initiatives that promote peace, diversity, and human rights across Yemen and beyond.
+                    </p>
+                </div>
+                
+                <div class="projects-grid">
+                    <article class="project-card" data-aos="fade-up">
+                        <div class="project-card__image">
+                            <img src="images/project-water-crisis.jpg" alt="Water Crisis Investigation" loading="lazy">
+                            <div class="project-card__badge">Active</div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Water Crisis Documentation</h3>
+                            <p class="project-card__description">
+                                Investigating and documenting water scarcity issues in rural Yemen communities, highlighting the human impact of infrastructure challenges.
+                            </p>
+                            <div class="project-card__meta">
+                                <span class="project-card__category">Humanitarian</span>
+                                <span class="project-card__date">2025</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-card__image">
+                            <img src="images/project-religious-freedom.jpg" alt="Religious Freedom Research" loading="lazy">
+                            <div class="project-card__badge">Ongoing</div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Religious Freedom & Choice</h3>
+                            <p class="project-card__description">
+                                Research and advocacy for religious freedom and the right to choice, focusing on minority rights and freedom of conscience.
+                            </p>
+                            <div class="project-card__meta">
+                                <span class="project-card__category">Rights</span>
+                                <span class="project-card__date">2024-2025</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-card__image">
+                            <img src="images/project-cultural-heritage.jpg" alt="Cultural Heritage Preservation" loading="lazy">
+                            <div class="project-card__badge">Featured</div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Cultural Heritage Preservation</h3>
+                            <p class="project-card__description">
+                                Documenting and preserving Yemeni cultural heritage, including traditional music, art, and historical narratives.
+                            </p>
+                            <div class="project-card__meta">
+                                <span class="project-card__category">Culture</span>
+                                <span class="project-card__date">2023-2025</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="section__action">
+                    <a href="projects.html" class="btn btn--outline">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Reports Section -->
+        <section class="latest-reports section" id="latest-reports">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Recent Publications</h2>
+                    <p class="section__description">
+                        Stay informed with our latest research, reports, and analysis on humanitarian and social issues.
+                    </p>
+                </div>
+                
+                <div class="reports-grid">
+                    <article class="report-card" data-aos="fade-up">
+                        <div class="report-card__meta">
+                            <span class="report-card__category">Investigation</span>
+                            <time class="report-card__date">July 21, 2025</time>
+                        </div>
+                        <h3 class="report-card__title">
+                            <a href="#" class="report-card__link">Thirst in Habib Al-Harsh Village: When Humans and Goats Share Water</a>
+                        </h3>
+                        <p class="report-card__excerpt">
+                            A humanitarian report from Habib Al-Harsh village in Al-Wadiah district, Abyan, where residents and livestock share limited water resources...
+                        </p>
+                        <div class="report-card__author">
+                            <span>By Umat Rahman Al-Afouri</span>
+                        </div>
+                    </article>
+                    
+                    <article class="report-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="report-card__meta">
+                            <span class="report-card__category">Analysis</span>
+                            <time class="report-card__date">July 20, 2025</time>
+                        </div>
+                        <h3 class="report-card__title">
+                            <a href="#" class="report-card__link">Taiz and Political Thirst: How International Aid Cessation Deepened the Crisis</a>
+                        </h3>
+                        <p class="report-card__excerpt">
+                            Special analysis of the water crisis in Taiz: How the cessation of international support contributed to deepening thirst in the city...
+                        </p>
+                        <div class="report-card__author">
+                            <span>By EOHM Team</span>
+                        </div>
+                    </article>
+                    
+                    <article class="report-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="report-card__meta">
+                            <span class="report-card__category">Culture</span>
+                            <time class="report-card__date">July 1, 2025</time>
+                        </div>
+                        <h3 class="report-card__title">
+                            <a href="#" class="report-card__link">Yemeni Song: Resistant Heritage and Eternal Identity</a>
+                        </h3>
+                        <p class="report-card__excerpt">
+                            Yemeni music has a rich history and deep roots in Yemeni civilization, distinguished by its enchanting lyrics and sweet melodies...
+                        </p>
+                        <div class="report-card__author">
+                            <span>By Umat Rahman Al-Afouri</span>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="section__action">
+                    <a href="#" class="btn btn--outline">View All Reports</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Summary Section -->
+        <section class="impact-summary section section--dark" id="impact-summary">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Our Impact</h2>
+                    <p class="section__description">
+                        Measuring our contribution to building a more peaceful and inclusive society.
+                    </p>
+                </div>
+                
+                <div class="impact-stats">
+                    <div class="stat-card" data-aos="fade-up">
+                        <div class="stat-card__number" data-target="150">0</div>
+                        <div class="stat-card__label">Articles Published</div>
+                        <div class="stat-card__description">In-depth reports and investigations</div>
+                    </div>
+                    
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-card__number" data-target="25">0</div>
+                        <div class="stat-card__label">Active Projects</div>
+                        <div class="stat-card__description">Ongoing initiatives for peace</div>
+                    </div>
+                    
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-card__number" data-target="50000">0</div>
+                        <div class="stat-card__label">People Reached</div>
+                        <div class="stat-card__description">Through our digital platforms</div>
+                    </div>
+                    
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-card__number" data-target="5">0</div>
+                        <div class="stat-card__label">Years Active</div>
+                        <div class="stat-card__description">Since our founding in 2020</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="partners section" id="partners">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Our Partners</h2>
+                    <p class="section__description">
+                        Collaborating with organizations worldwide to amplify our impact and reach.
+                    </p>
+                </div>
+                
+                <div class="partners-grid">
+                    <div class="partner-logo" data-aos="fade-up">
+                        <img src="images/partner-1.webp" alt="Partner Organization 1" loading="lazy">
+                    </div>
+                    <div class="partner-logo" data-aos="fade-up" data-aos-delay="100">
+                        <img src="images/partner-2.webp" alt="Partner Organization 2" loading="lazy">
+                    </div>
+                    <div class="partner-logo" data-aos="fade-up" data-aos-delay="200">
+                        <img src="images/partner-3.webp" alt="Partner Organization 3" loading="lazy">
+                    </div>
+                    <div class="partner-logo" data-aos="fade-up" data-aos-delay="300">
+                        <img src="images/partner-4.webp" alt="Partner Organization 4" loading="lazy">
+                    </div>
+                </div>
+                
+                <div class="section__action">
+                    <a href="contact.html" class="btn btn--primary">Become a Partner</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__brand">
+                        <img src="images/eohm-logo.jpg" alt="EOHM Logo" class="footer__logo">
+                        <h3 class="footer__title">EOHM</h3>
+                        <p class="footer__description">
+                            Building a culture of peace through innovative media content and digital projects that promote diversity and human rights.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="about.html" class="footer__link">About Us</a></li>
+                        <li><a href="projects.html" class="footer__link">Projects</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                        <li><a href="#" class="footer__link">Reports</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__heading">Contact Info</h4>
+                    <div class="footer__contact">
+                        <p class="footer__contact-item">
+                            <strong>Address:</strong><br>
+                            Republic of Yemen, Sana'a<br>
+                            Ma'in Directorate, Hayel Street
+                        </p>
+                        <p class="footer__contact-item">
+                            <strong>Email:</strong><br>
+                            <a href="mailto:info@eohm.org" class="footer__link">info@eohm.org</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__heading">Follow Us</h4>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="footer__newsletter">
+                        <h5 class="footer__newsletter-title">Newsletter</h5>
+                        <form class="footer__newsletter-form">
+                            <input type="email" class="footer__newsletter-input" placeholder="Your email address" required>
+                            <button type="submit" class="footer__newsletter-btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    <p>&copy; 2025 EOHM - Electronic Organization for Humanitarian Media. All rights reserved.</p>
+                </div>
+                <div class="footer__legal">
+                    <a href="#" class="footer__legal-link">Privacy Policy</a>
+                    <a href="#" class="footer__legal-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast__content">
+            <span class="toast__message"></span>
+            <button class="toast__close">&times;</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
