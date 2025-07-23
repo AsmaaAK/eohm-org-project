@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Our Projects - EOHM</title>
+    <meta name="description" content="Explore EOHM's projects in humanitarian media, peace building, cultural preservation, and human rights advocacy across Yemen and beyond.">
+    <meta name="keywords" content="EOHM projects, humanitarian media, Yemen projects, peace building, cultural heritage">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/eohm-logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <a href="index.html" class="nav__logo">
+                    <img src="images/eohm-logo.webp" alt="EOHM Logo" class="nav__logo-img">
+                    <span>EOHM</span>
+                </a>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="about.html" class="nav__link">About Us</a></li>
+                    <li><a href="projects.html" class="nav__link nav__link--active">Projects</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+                
+                <div class="nav__actions">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-toggle__icon">??</span>
+                    </button>
+                    <button class="nav__search-btn" id="search-btn" aria-label="Search">
+                        <li class="fas fa-search fa-2x"></li>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+<!-- Search Modal -->
+<div class="search-modal" id="search-modal">
+    <div class="search-modal__content">
+        <input type="text" class="search-modal__input" id="search-input" placeholder="Search articles, projects...">
+        <button class="search-modal__close" id="search-close">&times;</button>
+    </div>
+</div>
+
+<!-- Main Content -->
+<main>
+    <!-- Projects Hero Section -->
+    <section class="section section--dark">
+        <div class="container">
+            <div class="projects-hero">
+                <h1 class="projects-hero__title">Our Projects</h1>
+                <p class="projects-hero__description">
+                    Discover our ongoing initiatives that promote peace, diversity, and human rights across Yemen and beyond. 
+                    Each project represents our commitment to building a more inclusive and peaceful world through innovative media and advocacy.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Filters -->
+    <section class="section">
+        <div class="container">
+            <div class="project-filters">
+            <div class="filter-controls">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="humanitarian">Humanitarian</button>
+                    <button class="filter-btn" data-filter="rights">Human Rights</button>
+                    <button class="filter-btn" data-filter="culture">Cultural Heritage</button>
+                    <button class="filter-btn" data-filter="media">Media & Advocacy</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Featured Projects</h2>
+                <p class="section__description">
+                    Our most impactful and ongoing initiatives that are making a difference in communities.
+                </p>
+            </div>
+            
+            <div class="featured-projects-grid">
+                <!-- Project 1 -->
+                <div class="featured-project" data-aos="fade-up">
+                    <div class="featured-project__image">
+                        <img src="images/waterImg.jpg" alt="Water Crisis Documentation" loading="lazy">
+                        <div class="featured-project__status featured-project__status--active">Active</div>
+                    </div>
+                    <div class="featured-project__content">
+                        <div class="featured-project__meta">
+                            <span class="featured-project__category">Humanitarian</span>
+                            <span class="featured-project__date">2024 - Present</span>
+                        </div>
+                        <h3 class="featured-project__title">Water Crisis Documentation</h3>
+                        <p class="featured-project__description">
+                            A comprehensive investigation into water scarcity issues affecting rural communities in Yemen. 
+                            This project documents the human impact of infrastructure challenges and advocates for sustainable solutions.
+                        </p>
+                        <div class="featured-project__stats">
+                            <div class="stat">
+                                <span class="stat__number">15</span>
+                                <span class="stat__label">Communities</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">50+</span>
+                                <span class="stat__label">Interviews</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">8</span>
+                                <span class="stat__label">Reports</span>
+                            </div>
+                        </div>
+                        <div class="featured-project__actions">
+                            <button class="btn btn--primary">Learn More</button>
+                            <button class="btn btn--outline">View Reports</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="featured-project" data-aos="fade-up" data-aos-delay="200">
+                    <div class="featured-project__image">
+                        <img src="images/project-cultural-heritage.jpg" alt="Cultural Heritage Preservation" loading="lazy">
+                        <div class="featured-project__status featured-project__status--featured">Featured</div>
+                    </div>
+                    <div class="featured-project__content">
+                        <div class="featured-project__meta">
+                            <span class="featured-project__category">Cultural Heritage</span>
+                            <span class="featured-project__date">2023 - Present</span>
+                        </div>
+                        <h3 class="featured-project__title">Yemeni Cultural Heritage Archive</h3>
+                        <p class="featured-project__description">
+                            Documenting and preserving Yemen's rich cultural heritage through digital storytelling, 
+                            including traditional music, art, oral histories, and historical narratives.
+                        </p><br>
+                        <div class="featured-project__stats">
+                            <div class="stat">
+                                <span class="stat__number">200+</span>
+                                <span class="stat__label">Artifacts</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">30</span>
+                                <span class="stat__label">Artists</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">12</span>
+                                <span class="stat__label">Regions</span>
+                            </div>
+                        </div>
+                        <div class="featured-project__actions">
+                            <button class="btn btn--primary">Explore Archive</button>
+                            <button class="btn btn--outline">Contribute</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Projects Grid -->
+    <section class="section section--dark">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">All Projects</h2>
+            </div> 
+            <div class="projects-grid" id="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card" data-category="rights" data-status="ongoing" data-year="2024">
+                    <div class="project-card__image">
+                        <img src="images/project-religious-freedom.jpg" alt="Religious Freedom & Choice" loading="lazy">
+                        <div class="project-card__badge project-card__badge--ongoing">Ongoing</div>
+                    </div>
+                    <div class="project-card__content">
+                        <div class="project-card__meta">
+                            <span class="project-card__category">Human Rights</span>
+                            <span class="project-card__date">2024 - 2025</span>
+                        </div>
+                        <h3 class="project-card__title">Religious Freedom & Choice</h3>
+                        <p class="project-card__description">
+                            Research and advocacy for religious freedom and the right to choice, focusing on minority rights 
+                            and freedom of conscience in the Middle East region.
+                        </p>
+                        <div class="project-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill" style="width: 75%"></div>
+                            </div>
+                            <span class="progress-text">75% Complete</span>
+                        </div>
+                        <div class="project-card__actions">
+                            <button class="btn btn--secondary btn--small">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <div class="project-card" data-category="media" data-status="completed" data-year="2023">
+                    <div class="project-card__image">
+                        <img src="images/peace-building-community.jpg" alt="Digital Storytelling Initiative" loading="lazy">
+                        <div class="project-card__badge project-card__badge--completed">Completed</div>
+                    </div>
+                    <div class="project-card__content">
+                        <div class="project-card__meta">
+                            <span class="project-card__category">Media & Advocacy</span>
+                            <span class="project-card__date">2023</span>
+                        </div>
+                        <h3 class="project-card__title">Digital Storytelling Initiative</h3>
+                        <p class="project-card__description">
+                            Training program for young journalists and content creators to develop skills in digital 
+                            storytelling and multimedia journalism.
+                        </p>
+                        <div class="project-card__achievements">
+                            <div class="achievement">
+                                <span class="achievement__number">45</span>
+                                <span class="achievement__label">Participants</span>
+                            </div>
+                            <div class="achievement">
+                                <span class="achievement__number">120</span>
+                                <span class="achievement__label">Stories Created</span>
+                            </div>
+                        </div>
+                        <div class="project-card__actions">
+                            <button class="btn btn--secondary btn--small">View Results</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="project-card" data-category="humanitarian" data-status="planning" data-year="2025">
+                    <div class="project-card__image">
+                        <div class="project-card__placeholder">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                                <polyline points="14,2 14,8 20,8"></polyline>
+                            </svg>
+                        </div>
+                        <div class="project-card__badge project-card__badge--planning">Planning</div>
+                    </div>
+                    <div class="project-card__content">
+                        <div class="project-card__meta">
+                            <span class="project-card__category">Humanitarian</span>
+                            <span class="project-card__date">2025</span>
+                        </div>
+                        <h3 class="project-card__title">Healthcare Access Documentation</h3>
+                        <p class="project-card__description">
+                            Upcoming investigation into healthcare accessibility in remote areas, documenting challenges 
+                            and advocating for improved medical services.
+                        </p>
+                        <div class="project-card__timeline">
+                            <div class="timeline-item">
+                                <span class="timeline-date">Q1 2025</span>
+                                <span class="timeline-task">Research Phase</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">Q2 2025</span>
+                                <span class="timeline-task">Field Work</span>
+                            </div>
+                        </div>
+                        <div class="project-card__actions">
+                            <button class="btn btn--secondary btn--small">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 4 -->
+                <div class="project-card" data-category="culture" data-status="ongoing" data-year="2024">
+                    <div class="project-card__image">
+                        <div class="project-card__placeholder">
+                            <i class="fas fa-sun fa-3x"></i>
+                        </div>
+                        <div class="project-card__badge project-card__badge--ongoing">Ongoing</div>
+                    </div>
+                    <div class="project-card__content">
+                        <div class="project-card__meta">
+                            <span class="project-card__category">Cultural Heritage</span>
+                            <span class="project-card__date">2024 - Present</span>
+                        </div>
+                        <h3 class="project-card__title">Traditional Music Archive</h3>
+                        <p class="project-card__description">
+                            Recording and preserving traditional Yemeni music, working with local musicians to document 
+                            songs, instruments, and musical traditions.
+                        </p>
+                        <div class="project-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill" style="width: 60%"></div>
+                            </div>
+                            <span class="progress-text">60% Complete</span>
+                        </div>
+                        <div class="project-card__actions">
+                            <button class="btn btn--secondary btn--small">Listen</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 5 -->
+                <div class="project-card" data-category="media" data-status="ongoing" data-year="2024">
+                    <div class="project-card__image">
+                        <div class="project-card__placeholder">
+                            <i class="fas fa-play-circle fa-3x"></i>
+                        </div>
+                        <div class="project-card__badge project-card__badge--ongoing">Ongoing</div>
+                    </div>
+                    <div class="project-card__content">
+                        <div class="project-card__meta">
+                            <span class="project-card__category">Media & Advocacy</span>
+                            <span class="project-card__date">2024 - Present</span>
+                        </div>
+                        <h3 class="project-card__title">Peace Media Network</h3>
+                        <p class="project-card__description">
+                            Building a network of media professionals committed to peace journalism and conflict-sensitive 
+                            reporting across the region.
+                        </p>
+                        <div class="project-card__network">
+                            <div class="network-stat">
+                                <span class="network-number">25</span>
+                                <span class="network-label">Partners</span>
+                            </div>
+                            <div class="network-stat">
+                                <span class="network-number">8</span>
+                                <span class="network-label">Countries</span>
+                            </div>
+                        </div>
+                        <div class="project-card__actions">
+                            <button class="btn btn--secondary btn--small">Join Network</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 6 -->
+                <div class="project-card" data-category="rights" data-status="completed" data-year="2023">
+                    <div class="project-card__image">
+                        <div class="project-card__placeholder">
+                            <i class="fas fa-clock fa-3x"></i>
+                        </div>
+                        <div class="project-card__badge project-card__badge--completed">Completed</div>
+                    </div>
+                    <div class="project-card__content">
+                        <div class="project-card__meta">
+                            <span class="project-card__category">Human Rights</span>
+                            <span class="project-card__date">2023</span>
+                        </div>
+                        <h3 class="project-card__title">Women's Rights Documentation</h3>
+                        <p class="project-card__description">
+                            Comprehensive study on women's rights and gender equality issues, featuring interviews with 
+                            activists, legal experts, and community leaders.
+                        </p>
+                        <div class="project-card__impact">
+                            <div class="impact-item">
+                                <span class="impact-label">Policy Changes:</span>
+                                <span class="impact-value">3</span>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-label">Media Coverage:</span>
+                                <span class="impact-value">15 outlets</span>
+                            </div>
+                        </div>
+                        <div class="project-card__actions">
+                            <button class="btn btn--secondary btn--small">Read Report</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="section__action">
+                <button class="btn btn--outline" id="load-more-projects">Load More Projects</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Impact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Project Impact</h2>
+                <p class="section__description">
+                    Measuring the real-world impact of our projects across different sectors and communities.
+                </p>
+            </div>
+            
+            <div class="impact-metrics">
+                <!-- Metric 1 -->
+                <div class="impact-metric" data-aos="fade-up">
+                    <div class="impact-metric__icon">
+                        <i class="fas fa-users fa-3x"></i>
+                    </div>
+                    <div class="impact-metric__content">
+                        <h3 class="impact-metric__number" data-target="50000">50000</h3>
+                        <p class="impact-metric__label">People Reached</p>
+                        <p class="impact-metric__description">Through our digital platforms and community outreach</p>
+                    </div>
+                </div>
+                
+                <!-- Metric 2 -->
+                <div class="impact-metric" data-aos="fade-up" data-aos-delay="200">
+                    <div class="impact-metric__icon">
+                        <i class="fas fa-file-alt fa-3x"></i>
+                    </div>
+                    <div class="impact-metric__content">
+                        <h3 class="impact-metric__number" data-target="150">150</h3>
+                        <p class="impact-metric__label">Reports Published</p>
+                        <p class="impact-metric__description">In-depth investigations and research studies</p>
+                    </div>
+                </div>
+                
+                <!-- Metric 3 -->
+                <div class="impact-metric" data-aos="fade-up" data-aos-delay="400">
+                    <div class="impact-metric__icon">
+                        <i class="fas fa-layer-group fa-3x"></i>
+                    </div>
+                    <div class="impact-metric__content">
+                        <h3 class="impact-metric__number" data-target="25">25</h3>
+                        <p class="impact-metric__label">Active Projects</p>
+                        <p class="impact-metric__description">Ongoing initiatives across multiple sectors</p>
+                    </div>
+                </div>
+                
+                <!-- Metric 4 -->
+                <div class="impact-metric" data-aos="fade-up" data-aos-delay="600">
+                    <div class="impact-metric__icon">
+                        <i class="fas fa-clock fa-3x"></i>
+                    </div>
+                    <div class="impact-metric__content">
+                        <h3 class="impact-metric__number" data-target="5">5</h3>
+                        <p class="impact-metric__label">Years Active</p>
+                        <p class="impact-metric__description">Since our founding in 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section class="section section--dark">
+        <div class="container">
+            <div class="get-involved">
+                <div class="get-involved__content">
+                    <h2 class="get-involved__title">Get Involved</h2>
+                    <p class="get-involved__description">
+                        Join us in our mission to build a culture of peace through media and advocacy. 
+                        There are many ways to contribute to our projects and make a difference.
+                    </p>
+                    <div class="involvement-options">
+                        <div class="involvement-option">
+                            <h3>Volunteer</h3>
+                            <p>Contribute your skills to our ongoing projects</p>
+                        </div>
+                        <div class="involvement-option">
+                            <h3>Partner</h3>
+                            <p>Collaborate with us on new initiatives</p>
+                        </div>
+                        <div class="involvement-option">
+                            <h3>Support</h3>
+                            <p>Help fund our important work</p>
+                        </div>
+                    </div>
+                    <div class="get-involved__actions">
+                        <a href="contact.html" class="btn btn--primary">Contact Us</a>
+                        <a href="about.html" class="btn btn--outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="images/eohm-logo.png" alt="EOHM Logo" class="footer__logo">
+                    <h3 class="footer__title">EOHM</h3>
+                    <p class="footer__description">
+                        Building a culture of peace through innovative media content and digital projects 
+                        that promote diversity and human rights.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__links-section">
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="about.html" class="footer__link">About Us</a></li>
+                        <li><a href="projects.html" class="footer__link">Projects</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links-section">
+                    <h4 class="footer__heading">Our Work</h4>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Research</a></li>
+                        <li><a href="#" class="footer__link">Reports</a></li>
+                        <li><a href="#" class="footer__link">Media Content</a></li>
+                        <li><a href="#" class="footer__link">Advocacy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__contact">
+                    <h4 class="footer__heading">Contact Info</h4>
+                    <div class="footer__contact-item">
+                        <strong>Email:</strong><br>
+                        info@eohm.org
+                    </div>
+                    <div class="footer__contact-item">
+                        <strong>Location:</strong><br>
+                        Sana'a, Yemen
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; 2025 EOHM - Electronic Organization for Humanitarian Media. All rights reserved.
+                </p>
+                <div class="footer__legal">
+                    <a href="#" class="footer__legal-link">Privacy Policy</a>
+                    <a href="#" class="footer__legal-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast__content">
+            <span class="toast__message"></span>
+            <button class="toast__close">&times;</button>
+        </div>
+    </div>
+
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // عناصر DOM
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    const projectsGrid = document.getElementById('projects-grid');
+    const loadMoreBtn = document.getElementById('load-more-projects');
+    const noProjectsMsg = document.createElement('div');
+    
+    // إعدادات الفلترة
+    let visibleProjects = 6;
+    const projectsPerLoad = 3;
+    let activeFilter = 'all';
+    
+    // تهيئة الرسالة عند عدم وجود مشاريع
+    noProjectsMsg.className = 'no-projects-message';
+    noProjectsMsg.innerHTML = `
+        <div class="no-projects-content">
+            <i class="fas fa-box-open"></i>
+            <h3>No projects found</h3>
+            <p>Try adjusting your filters</p>
+        </div>
+    `;
+    
+    // تهيئة الفلترة
+    function init() {
+        setupFilterButtons();
+        setupLoadMoreButton();
+        filterProjects('all', true);
+    }
+    
+    // إعداد أزرار الفلترة
+    function setupFilterButtons() {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // تحديث الزر النشط
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // تطبيق الفلترة
+                activeFilter = this.dataset.filter;
+                visibleProjects = 6; // إعادة التعيين عند تغيير الفلتر
+                filterProjects(activeFilter);
+                
+                // التمرير إلى الأعلى بلطف
+                smoothScrollTo(projectsGrid, 300);
+            });
+        });
+    }
+    
+    // إعداد زر "تحميل المزيد"
+    function setupLoadMoreButton() {
+        if (!loadMoreBtn) return;
+        
+        loadMoreBtn.addEventListener('click', function() {
+            visibleProjects += projectsPerLoad;
+            filterProjects(activeFilter);
+            
+            // التمرير إلى المشاريع الجديدة
+            setTimeout(() => {
+                const newVisibleCards = Array.from(projectCards)
+                    .filter(card => card.style.display === 'block' || card.style.display === '');
+                
+                if (newVisibleCards.length > 0) {
+                    smoothScrollTo(newVisibleCards[newVisibleCards.length - 1], 300, 100);
+                }
+            }, 50);
+        });
+    }
+    
+    // فلترة المشاريع
+    function filterProjects(filter, initialLoad = false) {
+        let visibleCount = 0;
+        
+        // إخفاء جميع المشاريع بسلاسة
+        if (!initialLoad) {
+            projectCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transition = 'opacity 0.2s ease';
+            });
+        }
+        
+        setTimeout(() => {
+            projectCards.forEach((card, index) => {
+                const matchesFilter = filter === 'all' || card.dataset.category === filter;
+                const withinVisibleRange = index < visibleProjects;
+                
+                if (matchesFilter && withinVisibleRange) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                    
+                    // تأثير ظهور تدريجي
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                    }, visibleCount * 50);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // تحديث زر "تحميل المزيد"
+            updateLoadMoreButton(filter);
+            
+            // إظهار رسالة عدم وجود مشاريع
+            handleNoProjectsMessage(visibleCount);
+            
+        }, initialLoad ? 0 : 200);
+    }
+    
+    // تحديث زر "تحميل المزيد"
+    function updateLoadMoreButton(filter) {
+        if (!loadMoreBtn) return;
+        
+        const totalFilteredProjects = Array.from(projectCards)
+            .filter(card => filter === 'all' || card.dataset.category === filter).length;
+        
+        if (visibleProjects >= totalFilteredProjects) {
+            loadMoreBtn.style.display = 'none';
+        } else {
+            loadMoreBtn.style.display = 'block';
+        }
+    }
+    
+    // إدارة رسالة عدم وجود مشاريع
+    function handleNoProjectsMessage(visibleCount) {
+        const existingMessage = projectsGrid.querySelector('.no-projects-message');
+        
+        if (visibleCount === 0) {
+            if (!existingMessage) {
+                projectsGrid.appendChild(noProjectsMsg);
+            }
+        } else if (existingMessage) {
+            existingMessage.remove();
+        }
+    }
+    
+    // وظيفة مساعدة للتمرير السلس
+    function smoothScrollTo(element, duration, offset = 20) {
+        const targetPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
+        
+        function animation(currentTime) {
+            if (!startTime) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+        
+        function easeInOutQuad(t, b, c, d) {
+            t /= d/2;
+            if (t < 1) return c/2*t*t + b;
+            t--;
+            return -c/2 * (t*(t-2) - 1) + b;
+        }
+        
+        requestAnimationFrame(animation);
+    }
+    
+    // بدء التشغيل
+    init();
+});
+    </script>
+    
+</body>
+</html>
+
+
+

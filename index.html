@@ -38,13 +38,13 @@
                         <a href="index.html" class="nav__link nav__link--active">Home</a>
                     </li>
                     <li class="nav__item">
-                        <a href="about.html" class="nav__link">About Us</a>
+                        <a href="./about.html" class="nav__link">About Us</a>
                     </li>
                     <li class="nav__item">
                         <a href="projects.html" class="nav__link">Projects</a>
                     </li>
                     <li class="nav__item">
-                        <a href="contact.html" class="nav__link">Contact</a>
+                        <a href="./contact.html" class="nav__link">Contact</a>
                     </li>
                 </ul>
                 
@@ -236,42 +236,45 @@
         </section>
 
         <!-- Impact Summary Section -->
-        <section class="impact-summary section section--dark" id="impact-summary">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title">Our Impact</h2>
-                    <p class="section__description">
-                        Measuring our contribution to building a more peaceful and inclusive society.
-                    </p>
-                </div>
-                
-                <div class="impact-stats">
-                    <div class="stat-card" data-aos="fade-up">
-                        <div class="stat-card__number" data-target="150">0</div>
-                        <div class="stat-card__label">Articles Published</div>
-                        <div class="stat-card__description">In-depth reports and investigations</div>
-                    </div>
-                    
-                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="stat-card__number" data-target="25">0</div>
-                        <div class="stat-card__label">Active Projects</div>
-                        <div class="stat-card__description">Ongoing initiatives for peace</div>
-                    </div>
-                    
-                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="stat-card__number" data-target="50000">0</div>
-                        <div class="stat-card__label">People Reached</div>
-                        <div class="stat-card__description">Through our digital platforms</div>
-                    </div>
-                    
-                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="stat-card__number" data-target="5">0</div>
-                        <div class="stat-card__label">Years Active</div>
-                        <div class="stat-card__description">Since our founding in 2020</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+   <section class="impact-summary section section--dark" id="impact-summary">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">Our Impact</h2>
+      <p class="section__description">
+        Measuring our contribution to building a more peaceful and inclusive society.
+      </p>
+    </div>
+
+    <div class="impact-stats">
+      <div class="stat-card" data-aos="fade-up">
+        <div class="stat-card__number" data-target="150">0</div>
+        <div class="stat-card__label">Articles Published</div>
+        <div class="stat-card__description">In-depth reports and investigations</div>
+      </div>
+
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat-card__number" data-target="25">0</div>
+        <div class="stat-card__label">Active Projects</div>
+        <div class="stat-card__description">Ongoing initiatives for peace</div>
+      </div>
+
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-card__number" data-target="50000">0</div>
+        <div class="stat-card__label">People Reached</div>
+        <div class="stat-card__description">Through our digital platforms</div>
+      </div>
+
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat-card__number" data-target="5">0</div>
+        <div class="stat-card__label">Years Active</div>
+        <div class="stat-card__description">Since our founding in 2020</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
         <!-- Partners Section -->
         <section class="partners section" id="partners">
@@ -402,5 +405,46 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
+     <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll(".stat-card__number");
+    const options = {
+      threshold: 0.5
+    };
+
+    const startCount = (counter) => {
+      const target = +counter.getAttribute("data-target");
+      let current = 0;
+      const increment = target / 100;
+      const duration = 2000;
+      const stepTime = duration / 100;
+
+      const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+          counter.innerText = Math.ceil(current).toLocaleString();
+          setTimeout(updateCounter, stepTime);
+        } else {
+          counter.innerText = target.toLocaleString();
+        }
+      };
+
+      updateCounter();
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains("counted")) {
+          entry.target.classList.add("counted");
+          startCount(entry.target);
+        }
+      });
+    }, options);
+
+    counters.forEach(counter => {
+      observer.observe(counter);
+    });
+  });
+</script>
 </body>
 </html>

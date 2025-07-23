@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>About Us - EOHM</title>
+    <meta name="description" content="Learn about EOHM - Electronic Organization for Humanitarian Media. Our mission, vision, team, and commitment to building a culture of peace through innovative media.">
+    <meta name="keywords" content="EOHM about, humanitarian media, Yemen NGO, peace building, media organization">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/eohm-logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <a href="index.html" class="nav__logo">
+                    <img src="images/eohm-logo.webp" alt="EOHM Logo" class="nav__logo-img">
+                    <span>EOHM</span>
+                </a>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="about.html" class="nav__link nav__link--active">About Us</a></li>
+                    <li><a href="projects.html" class="nav__link">Projects</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+                
+                <div class="nav__actions">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-toggle__icon">🌙</span>
+                    </button>
+                    <button class="nav__search-btn" id="search-btn" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="search-modal">
+        <div class="search-modal__content">
+            <input type="text" class="search-modal__input" id="search-input" placeholder="Search articles, projects...">
+            <button class="search-modal__close" id="search-close">&times;</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Hero Section -->
+        <section class="section section--dark">
+            <div class="container">
+                <div class="about-hero">
+                    <div class="about-hero__content">
+                        <h1 class="about-hero__title">About EOHM</h1>
+                        <p class="about-hero__subtitle">Electronic Organization for Humanitarian Media</p>
+                        <p class="about-hero__description">
+                            We are an independent non-profit organization dedicated to combating violence, discrimination, 
+                            and hate speech through innovative media content and digital projects that promote diversity and peace.
+                        </p>
+                    </div>
+                    <div class="about-hero__image">
+                        <img src="images/peace-building-community.jpg" alt="Peace building community" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision Section -->
+        <section class="section">
+            <div class="container">
+                <div class="mission-vision-grid">
+                    <div class="mission-card" data-aos="fade-up">
+                        <div class="mission-card__icon">
+                            <li class="fas fa-layer-group fa-3x"></li>
+                        </div>
+                        <h2 class="mission-card__title">Our Mission</h2>
+                        <p class="mission-card__description">
+                            To build a culture of peace through innovative media content and digital projects that combat 
+                            violence, discrimination, and hate speech while promoting diversity, human rights, and social justice.
+                        </p>
+                    </div>
+                    
+                    <div class="mission-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="mission-card__icon">
+                            <li class="fas fa-eye fa-3x"></li>
+                        </div>
+                        <h2 class="mission-card__title" data-aos="fade-up" data-aos-delay="200">Our Vision</h2>
+                        <p class="mission-card__description">
+                            A world where media serves as a bridge for understanding, where diverse voices are heard and 
+                            respected, and where digital platforms become tools for peace-building and social cohesion.
+                        </p>
+                    </div>
+                    
+                    <div class="mission-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="mission-card__icon">
+                            <li class="fas fa-bolt fa-3x"></li>
+                        </div>
+                        <h2 class="mission-card__title">Our Values</h2>
+                        <p class="mission-card__description">
+                            Integrity, inclusivity, innovation, and impact. We believe in the power of authentic storytelling, 
+                            diverse perspectives, cutting-edge technology, and measurable positive change in communities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="section section--dark">
+            <div class="container">
+                <div class="story-section">
+                    <div class="story-content">
+                        <h2 class="section__title">Our Story</h2>
+                        <div class="story-text">
+                            <p>
+                                Founded in 2020 during a time of unprecedented global challenges, EOHM emerged from a 
+                                recognition that media and digital platforms could be powerful forces for positive change. 
+                                Our founders, a group of journalists, activists, and technologists from Yemen and beyond, 
+                                came together with a shared vision of using media to build bridges rather than walls.
+                            </p>
+                            <p>
+                                In a region often portrayed through the lens of conflict, we saw an opportunity to tell 
+                                different stories – stories of resilience, hope, cultural richness, and human dignity. 
+                                We began by documenting the experiences of ordinary people facing extraordinary circumstances, 
+                                giving voice to those who are often unheard in mainstream media narratives.
+                            </p>
+                            <p>
+                                Over the years, our work has expanded to include investigative journalism, cultural preservation 
+                                projects, peace-building initiatives, and digital literacy programs. We have partnered with 
+                                local communities, international organizations, and fellow media outlets to amplify important 
+                                stories and create meaningful change.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline">
+                        <h3 class="timeline__title">Key Milestones</h3>
+                        <div class="timeline__items">
+                            <div class="timeline__item" data-aos="fade-left">
+                                <div class="timeline__year">2020</div>
+                                <div class="timeline__content">
+                                    <h4>Foundation</h4>
+                                    <p>EOHM was officially established with a focus on humanitarian media and peace-building.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline__item" data-aos="fade-left" data-aos-delay="200">
+                                <div class="timeline__year">2021</div>
+                                <div class="timeline__content">
+                                    <h4>First Major Investigation</h4>
+                                    <p>Published our groundbreaking report on water scarcity in rural Yemen communities.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline__item" data-aos="fade-left" data-aos-delay="400">
+                                <div class="timeline__year">2022</div>
+                                <div class="timeline__content">
+                                    <h4>Cultural Heritage Project</h4>
+                                    <p>Launched our initiative to document and preserve Yemeni cultural heritage through digital media.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline__item" data-aos="fade-left" data-aos-delay="600">
+                                <div class="timeline__year">2023</div>
+                                <div class="timeline__content">
+                                    <h4>International Recognition</h4>
+                                    <p>Received recognition from international human rights organizations for our advocacy work.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline__item" data-aos="fade-left" data-aos-delay="800">
+                                <div class="timeline__year">2024</div>
+                                <div class="timeline__content">
+                                    <h4>Digital Expansion</h4>
+                                    <p>Expanded our digital presence and launched new multimedia storytelling initiatives.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline__item" data-aos="fade-left" data-aos-delay="1000">
+                                <div class="timeline__year">2025</div>
+                                <div class="timeline__content">
+                                    <h4>New Website Launch</h4>
+                                    <p>Launched our new website to better serve our community and share our work globally.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Our Team</h2>
+                    <p class="section__description">
+                        Meet the dedicated individuals who drive our mission forward through their expertise, 
+                        passion, and commitment to positive change.
+                    </p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member" data-aos="fade-up">
+                        <div class="team-member__image">
+                            <div class="team-member__placeholder">
+                                <li class="fas fa-user fa-6x"></li>
+                            </div>
+                        </div>
+                        <div class="team-member__content">
+                            <h3 class="team-member__name">Abdu_Alrazaq Al_Azazi</h3>
+                            <p class="team-member__role">Founder & CEO</p>
+                            <p class="team-member__bio">
+                             The organization was founded by a number of journalists, technicians, and researchers, and is currently managed electronically by 
+                             a team based in Yemen and several countries around the world.
+                            </p>
+                        </div>
+                    </div>
+                    
+                     
+                </div>
+            </div>
+        </section>
+
+        <!-- Approach Section -->
+        <section class="section section--dark">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Our Approach</h2>
+                    <p class="section__description">
+                        We believe in a holistic approach to humanitarian media that combines rigorous journalism, 
+                        community engagement, and innovative technology.
+                    </p>
+                </div>
+                
+                <div class="approach-grid">
+                    <div class="approach-item" data-aos="fade-up">
+                        <div class="approach-item__number">01</div>
+                        <h3 class="approach-item__title">Community-Centered</h3>
+                        <p class="approach-item__description">
+                            We work directly with communities to ensure their voices are heard and their stories 
+                            are told with authenticity and respect.
+                        </p>
+                    </div>
+                    
+                    <div class="approach-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="approach-item__number">02</div>
+                        <h3 class="approach-item__title">Evidence-Based</h3>
+                        <p class="approach-item__description">
+                            Our reporting and advocacy are grounded in thorough research, fact-checking, 
+                            and verification processes.
+                        </p>
+                    </div>
+                    
+                    <div class="approach-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="approach-item__number">03</div>
+                        <h3 class="approach-item__title">Collaborative</h3>
+                        <p class="approach-item__description">
+                            We partner with local organizations, international NGOs, and fellow media outlets 
+                            to amplify impact and reach.
+                        </p>
+                    </div>
+                    
+                    <div class="approach-item" data-aos="fade-up" data-aos-delay="600">
+                        <div class="approach-item__number">04</div>
+                        <h3 class="approach-item__title">Innovative</h3>
+                        <p class="approach-item__description">
+                            We leverage cutting-edge technology and creative storytelling methods to make 
+                            complex issues accessible and engaging.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-section">
+                    <h2 class="cta-section__title">Join Our Mission</h2>
+                    <p class="cta-section__description">
+                        Whether you're a journalist, researcher, activist, or simply someone who believes in the power 
+                        of media to create positive change, there are many ways to get involved with our work.
+                    </p>
+                    <div class="cta-section__actions">
+                        <a href="contact.html" class="btn btn--primary">Get in Touch</a>
+                        <a href="projects.html" class="btn btn--outline">View Our Projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="images/eohm-logo.webp" alt="EOHM Logo" class="footer__logo">
+                    <h3 class="footer__title">EOHM</h3>
+                    <p class="footer__description">
+                        Building a culture of peace through innovative media content and digital projects 
+                        that promote diversity and human rights.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                          <li class="fa-brands fa-facebook fa-2x"></li>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                          <li class="fa-brands fa-twitter fa-2x"></li>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                            <li class="fa-brands fa-linkedin fa-2x"></li>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube">
+                            <li class="fa-brands fa-youtube fa-2x"></li>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__links-section">
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="about.html" class="footer__link">About Us</a></li>
+                        <li><a href="projects.html" class="footer__link">Projects</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links-section">
+                    <h4 class="footer__heading">Our Work</h4>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Research</a></li>
+                        <li><a href="#" class="footer__link">Reports</a></li>
+                        <li><a href="#" class="footer__link">Media Content</a></li>
+                        <li><a href="#" class="footer__link">Advocacy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__contact">
+                    <h4 class="footer__heading">Contact Info</h4>
+                    <div class="footer__contact-item">
+                        <strong>Email:</strong><br>
+                        info@eohm.org
+                    </div>
+                    <div class="footer__contact-item">
+                        <strong>Location:</strong><br>
+                        Sana'a, Yemen
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; 2025 EOHM - Electronic Organization for Humanitarian Media. All rights reserved.
+                </p>
+                <div class="footer__legal">
+                    <a href="#" class="footer__legal-link">Privacy Policy</a>
+                    <a href="#" class="footer__legal-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast__content">
+            <span class="toast__message"></span>
+            <button class="toast__close">&times;</button>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+    
+</body>
+</html>
+
+
+
