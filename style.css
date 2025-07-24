@@ -291,6 +291,9 @@ a:hover {
   border-radius: 2px;
   transition:all 0.15s ease-in-out;
 }
+.nav__menu span .open{
+display: block;
+}
 
 /* Search Modal */
 .search-modal {
